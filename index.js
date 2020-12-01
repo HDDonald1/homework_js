@@ -1,11 +1,11 @@
 const now = new Date;
 const month = now.getMonth();
 const year = now.getFullYear();
-const date = new Date(year,month+1,-1);
+const date = new Date(year,month+1,0);
 let maxDay = date.getDate();
 let content = '';
 
-for(let i =1; i<maxDay;i++){
+for(let i =1; i<=maxDay;i++){
     let options = { weekday: 'short'};
     let day = new Intl.DateTimeFormat('en-US', options).format(new Date(year,month,i));
     content +=`<div> <span>${day.substring(0,2)}</span> <span>${i}</span></div>` 
