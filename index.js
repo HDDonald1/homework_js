@@ -2,7 +2,7 @@ const now = new Date;
 const month = now.getMonth();
 const year = now.getFullYear();
 const date = new Date(year,month+1,0);
-let maxDay = date.getDate();
+const maxDay = date.getDate();
 let content = '';
 
 for(let i =1; i<=maxDay;i++){
@@ -14,4 +14,3 @@ for(let i =1; i<=maxDay;i++){
 let parent = document.createElement('div')
 parent.innerHTML = content;
 document.body.appendChild(parent);
-
